@@ -15,6 +15,9 @@ export const publishPhoto = createAsyncThunk(
   "photo/publish",
   async (photo, thunkAPI) => {
     const token = thunkAPI.getState().auth.user.token;
+    if (!token) {
+      return thunkAPI.rejectWithValue("Usuário não autenticado");
+    }
     const data = await photoService.publishPhoto(photo, token);
 
     // Check for errors
@@ -284,7 +287,7 @@ export const photoSlice = createSlice({
         state.loading = false;
         state.success = true;
         state.error = null;
-        state.photos = action.payload;
+        state.photos = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(searchPhotos.pending, (state) => {
         state.loading = true;

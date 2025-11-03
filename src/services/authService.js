@@ -8,7 +8,7 @@ const register = async (data) => {
     const res = await fetch(`${api}/users/register`, config);
     const result = await res.json();
 
-    if (result._id) {
+    if (result.token) {
       localStorage.setItem("user", JSON.stringify(result));
     }
 
@@ -32,7 +32,7 @@ const login = async (data) => {
     const res = await fetch(`${api}/users/login`, config);
     const result = await res.json();
 
-    if (result._id) {
+    if (result.token) {
       localStorage.setItem("user", JSON.stringify(result));
     }
 
