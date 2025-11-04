@@ -48,6 +48,24 @@ npm install
 # Rode o servidor de desenvolvimento
 npm run dev
 ```
+
+---
+
+## 🔗 Backend do Projeto
+
+Este repositório contém apenas o **frontend** do ReactGram.  
+Para que todas as funcionalidades funcionem corretamente (login, registro, upload de fotos, etc.), é necessário rodar também o backend.
+
+👉 Repositório do backend: [ReactGram Backend](https://github.com/moisesjunior45/ReactGram-backend)
+
+No backend você encontrará:
+- API REST para autenticação e gerenciamento de usuários
+- Upload e armazenamento de imagens
+- Integração com banco de dados
+- Rotas protegidas com JWT
+
+Certifique-se de configurar o backend antes de iniciar o frontend.
+
 ## Tecnologias usadas:
 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -62,4 +80,5 @@ npm run dev
 ## 👷 Autor
 
 * **Moisés Júnior** - *Fullstack* - [Moisés Júnior](https://github.com/moisesjunior45)
+
 
